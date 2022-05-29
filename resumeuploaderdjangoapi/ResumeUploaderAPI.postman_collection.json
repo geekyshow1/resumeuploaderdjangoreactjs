@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "e3ceed0a-f1d1-4eea-a36d-f45426461ec9",
+		"name": "ResumeUploaderAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SaveProfile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Rahul",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "rahul@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "dob",
+							"value": "1995-05-10",
+							"type": "default"
+						},
+						{
+							"key": "state",
+							"value": "Bihar",
+							"type": "default"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"type": "default"
+						},
+						{
+							"key": "location",
+							"value": "Delhi Kolkata",
+							"type": "default"
+						},
+						{
+							"key": "pimage",
+							"type": "file",
+							"src": "/C:/Users/R/Desktop/Project/people-875597_640.jpg"
+						},
+						{
+							"key": "rdoc",
+							"type": "file",
+							"src": "/C:/Users/R/Desktop/Project/doc2.docx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/resume/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"resume",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListResume",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/list/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
