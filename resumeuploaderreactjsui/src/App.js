@@ -31,9 +31,17 @@ function App() {
 
   // Multi Checkbox
   const getPjl = (e) => {
-    let data = pjl
-    data.push(e.target.value)
-    setPjl(data)
+    // Destructuring
+    const { value, checked } = e.target;
+    console.log(`${value} is ${checked}`);
+    // User checks the box
+    if (checked) {
+      setPjl([...pjl, value])
+    }
+    // User unchecks the box
+    else {
+      setPjl(pjl.filter((e) => e !== value))
+    }
   }
 
   // Clear Form
